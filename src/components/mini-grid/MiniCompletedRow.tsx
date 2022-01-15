@@ -11,12 +11,12 @@ export const MiniCompletedRow = ({guess}: Props) => {
 		<div className="flex justify-center">
 			{guess.split('').map((_, i) => {
 				switch (statuses[i]) {
-					case 'absent':
-						return '⬜';
-					case 'present':
-						return '🟨';
 					case 'correct':
 						return '🟩';
+					case 'present':
+						return '🟨';
+					default:
+						return '⬜';
 				}
 			})}
 		</div>
