@@ -1,3 +1,9 @@
+/**
+ * SPOILER ALERT
+ *
+ * This file contains the solutions to each game of Wörtchen
+ */
+
 export const WORDS = [
 	'faste',
 	'nepal',

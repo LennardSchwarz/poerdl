@@ -815,6 +815,7 @@ export const VALIDGUESSES = [
 	'karos',
 	'karre',
 	'karte',
+	'kaste',
 	'kasko',
 	'kasse',
 	'kasus',
