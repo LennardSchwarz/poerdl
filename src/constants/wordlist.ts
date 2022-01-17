@@ -7,7 +7,7 @@
 export const WORDS = [
 	'faste',
 	'nepal',
-	'jener',
+	'bafög',
 	'nebst',
 	'dohle',
 	'zerrt',
@@ -21,7 +21,7 @@ export const WORDS = [
 	'bulle',
 	'chefs',
 	'abzug',
-	'plato',
+	'glück',
 	'hirte',
 	'abtes',
 	'todes',
