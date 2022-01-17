@@ -98,6 +98,11 @@ export const InfoModal = ({isOpen, handleClose}: Props) => {
 											Der <b>graue</b> Buchstabe R kommt
 											nicht im Wort vor.
 										</p>
+
+										<p className="text-sm text-gray-500  mt-4">
+											Um Mitternacht wird ein neues
+											Wörtchen des Tages freigeschaltet!
+										</p>
 									</div>
 								</div>
 							</div>
