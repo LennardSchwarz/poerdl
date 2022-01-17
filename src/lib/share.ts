@@ -8,8 +8,8 @@ export const shareStatus = (guesses: string[]) => {
       ' ' +
       guesses.length +
       '/6\n\n' +
-      'https://woertchen.sofacoach.de\n\n' +
-      generateEmojiGrid(guesses)
+      generateEmojiGrid(guesses) +
+      '\n\nhttps://woertchen.sofacoach.de'
   )
 }
 
