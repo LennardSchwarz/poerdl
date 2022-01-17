@@ -61,14 +61,14 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
                       >
                         Wordle
                       </a>{' '}
-                      von Josh Wardle. Der Spielcode basiert auf dem{' '}
+                      von Josh Wardle. Der Spielcode basiert auf Hannah Parks{' '}
                       <a
                         href="https://github.com/hannahcode/wordle"
                         className="underline font-bold"
                       >
-                        Wordle-Klon
+                        Open-Source-Adaption
                       </a>{' '}
-                      von Hannah Park.
+                      von Wordle.
                     </p>
                     <p className="text-sm text-gray-500 mt-2">
                       Den Quellcode von Wörtchen findet ihr{' '}
@@ -77,6 +77,17 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
                         className="underline font-bold"
                       >
                         auf Github
+                      </a>
+                      .
+                    </p>
+                    <p className="text-sm text-gray-500 mt-2">
+                      Hast du Feedback oder willst dein Ergebnis teilen?
+                      Schreibe ins{' '}
+                      <a
+                        href="https://forum.sofacoach.de/t/1888"
+                        className="underline font-bold"
+                      >
+                        Sofacoach-Forum
                       </a>
                       .
                     </p>

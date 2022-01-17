@@ -70,7 +70,11 @@ export const WinModal = ({
                   </Dialog.Title>
                   <div className="mt-2">
                     <MiniGrid guesses={guesses} />
-                    <p className="text-sm text-gray-500">Gut gemacht!</p>
+                    <p className="text-sm text-gray-500">
+                      Gut gemacht! Um dein Ergebnis zu teilen, klicke unten auf
+                      "Ergebnis kopieren". Danach kannst du das Ergebnis in
+                      Texteingabefelder einfügen.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -83,7 +87,7 @@ export const WinModal = ({
                     handleShare()
                   }}
                 >
-                  Teilen
+                  Ergebnis kopieren
                 </button>
               </div>
             </div>
