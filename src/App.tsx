@@ -76,13 +76,16 @@ function App() {
 
 	return (
 		<div className="py-8 max-w-7xl mx-auto sm:px-6 lg:px-8">
-			<Alert message="Word not found" isOpen={isWordNotFoundAlertOpen} />
 			<Alert
-				message={`You lost, the word was ${solution}`}
+				message="Wort nicht gefunden"
+				isOpen={isWordNotFoundAlertOpen}
+			/>
+			<Alert
+				message={`Leider verloren! Das gesuchte Wort war ${solution}`}
 				isOpen={isGameLost}
 			/>
 			<Alert
-				message="Game copied to clipboard"
+				message="Spielverlauf in Zwischenablage kopiert"
 				isOpen={shareComplete}
 				variant="success"
 			/>
@@ -90,6 +93,7 @@ function App() {
 				<h1 className="text-xl grow font-bold">Wörtchen</h1>
 				<InformationCircleIcon
 					className="h-6 w-6 cursor-pointer"
+					aria-label="So funktioniert's"
 					onClick={() => setIsInfoModalOpen(true)}
 				/>
 			</div>

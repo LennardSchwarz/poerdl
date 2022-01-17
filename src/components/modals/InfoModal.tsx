@@ -59,7 +59,7 @@ export const InfoModal = ({isOpen, handleClose}: Props) => {
 											Tages zu erraten. Nach jedem Versuch
 											wird mit unterschiedlichen Farben
 											angezeigt, wie nah dein Wort dem
-											gesuchten war.
+											gesuchten war:
 										</p>
 
 										<div className="flex justify-center mb-1 mt-4">
