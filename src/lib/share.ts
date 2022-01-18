@@ -13,23 +13,39 @@ export const shareStatus = (guesses: string[]) => {
   )
 }
 
-export const generateEmojiGrid = (guesses: string[]) => {
-  return guesses
-    .map((guess) => {
-      const status = getGuessStatuses(guess)
-      return guess
-        .split('')
-        .map((letter, i) => {
-          switch (status[i]) {
-            case 'correct':
-              return '🟩'
-            case 'present':
-              return '🟨'
-            default:
-              return '⬜'
-          }
-        })
-        .join('')
+export const shareStatusWithBBCode = (guesses: string[]) => {
+  navigator.clipboard.writeText(
+    '[Wörtchen](https://woertchen.sofacoach.de) ' +
+      solutionIndex +
+      ' ' +
+      guesses.length +
+      '/6\n\n' +
+      guesses
+        .map(
+          (guess) =>
+            `${generateEmojiGridLine(guess)} [spoiler]${guess}[/spoiler]`
+        )
+        .join('\n')
+  )
+}
+
+function generateEmojiGridLine(guess: string) {
+  const status = getGuessStatuses(guess)
+  return guess
+    .split('')
+    .map((letter, i) => {
+      switch (status[i]) {
+        case 'correct':
+          return '🟩'
+        case 'present':
+          return '🟨'
+        default:
+          return '⬜'
+      }
     })
-    .join('\n')
+    .join('')
+}
+
+export const generateEmojiGrid = (guesses: string[]) => {
+  return guesses.map(generateEmojiGridLine).join('\n')
 }

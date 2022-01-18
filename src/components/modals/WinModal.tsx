@@ -2,7 +2,7 @@ import { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { CheckIcon } from '@heroicons/react/outline'
 import { MiniGrid } from '../mini-grid/MiniGrid'
-import { shareStatus } from '../../lib/share'
+import { shareStatus, shareStatusWithBBCode } from '../../lib/share'
 
 type Props = {
   isOpen: boolean
@@ -88,6 +88,16 @@ export const WinModal = ({
                   }}
                 >
                   Ergebnis kopieren
+                </button>
+                <button
+                  type="button"
+                  className="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 mt-3 bg-gray-200 text-base font-medium hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
+                  onClick={() => {
+                    shareStatusWithBBCode(guesses)
+                    handleShare()
+                  }}
+                >
+                  Spoiler-BBCode kopieren
                 </button>
               </div>
             </div>
