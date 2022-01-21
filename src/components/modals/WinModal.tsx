@@ -104,7 +104,7 @@ export const WinModal = ({
                     handleShare()
                   }}
                 >
-                  Spoiler-BBCode kopieren
+                  Forumscode mit Spoilern kopieren
                 </button>
               </div>
             </div>
