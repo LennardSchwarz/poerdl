@@ -7,8 +7,12 @@
  * Extra words added:
  * - anime
  * - alien
+ * - erpel
+ * - herzt
  * - kebab
  * - kebap
+ * - zarge
+ * - zumba
  */
 
 export const VALIDGUESSES = [
@@ -531,6 +535,7 @@ export const VALIDGUESSES = [
   'erker',
   'erlen',
   'erlös',
+  'erpel',
   'erwin',
   'erzen',
   'erzes',
@@ -865,6 +870,7 @@ export const VALIDGUESSES = [
   'herrn',
   'herta',
   'hertz',
+  'herzt',
   'hesse',
   'heuss',
   'hexer',
@@ -2270,6 +2276,7 @@ export const VALIDGUESSES = [
   'zaire',
   'zange',
   'zaren',
+  'zarge',
   'zarin',
   'zaume',
   'zaums',
@@ -4421,6 +4428,7 @@ export const VALIDGUESSES = [
   'zugab',
   'zugig',
   'zumal',
+  'zumba',
   'zupfe',
   'zupft',
   'zusah',
