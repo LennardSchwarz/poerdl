@@ -1,13 +1,17 @@
 import { Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XCircleIcon } from '@heroicons/react/outline'
+import { StatBar } from '../stats/StatBar'
+import { Histogram } from '../stats/Histogram'
+import { GameStats } from '../../lib/localStorage'
 
 type Props = {
   isOpen: boolean
   handleClose: () => void
+  gameStats: GameStats
 }
 
-export const AboutModal = ({ isOpen, handleClose }: Props) => {
+export const StatsModal = ({ isOpen, handleClose, gameStats }: Props) => {
   return (
     <Transition.Root show={isOpen} as={Fragment}>
       <Dialog
@@ -44,11 +48,15 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
             leaveFrom="opacity-100 translate-y-0 sm:scale-100"
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
-            <div className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6">
+            <div
+              className="inline-block align-bottom bg-white rounded-lg px-4 
+                            pt-5 pb-4 text-left overflow-hidden shadow-xl transform 
+                            transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6"
+            >
               <div className="absolute right-4 top-4">
                 <XCircleIcon
                   className="h-6 w-6 cursor-pointer"
-                  onClick={() => handleClose()}
+                  onClick={handleClose}
                 />
               </div>
               <div>
@@ -57,48 +65,13 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
                     as="h3"
                     className="text-lg leading-6 font-medium text-gray-900"
                   >
-                    Auf ein Wörtchen
+                    Statistik
                   </Dialog.Title>
-                  <div className="mt-2">
-                    <p className="text-sm text-gray-500">
-                      Wörtchen ist ein deutschsprachiger Klon des Spiels{' '}
-                      <a
-                        href="https://www.powerlanguage.co.uk/wordle/"
-                        className="underline font-bold"
-                      >
-                        Wordle
-                      </a>{' '}
-                      von Josh Wardle. Der Spielcode basiert auf Hannah Parks{' '}
-                      <a
-                        href="https://github.com/hannahcode/wordle"
-                        className="underline font-bold"
-                      >
-                        Open-Source-Adaption
-                      </a>{' '}
-                      von Wordle.
-                    </p>
-                    <p className="text-sm text-gray-500 mt-2">
-                      Den Quellcode von Wörtchen findet ihr{' '}
-                      <a
-                        href="https://github.com/diondiondion/woertchen/"
-                        className="underline font-bold"
-                      >
-                        auf Github
-                      </a>
-                      .
-                    </p>
-                    <p className="text-sm text-gray-500 mt-2">
-                      Hast du Feedback oder willst dein Ergebnis teilen?
-                      Schreibe ins{' '}
-                      <a
-                        href="https://forum.sofacoach.de/t/1888"
-                        className="underline font-bold"
-                      >
-                        Sofacoach-Forum
-                      </a>
-                      .
-                    </p>
-                  </div>
+                  <StatBar gameStats={gameStats} />
+                  <h4 className="text-lg leading-6 font-medium text-gray-900">
+                    Versuchsverteilung
+                  </h4>
+                  <Histogram gameStats={gameStats} />
                 </div>
               </div>
             </div>
