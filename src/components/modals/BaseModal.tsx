@@ -61,7 +61,9 @@ export const BaseModal = ({ title, children, isOpen, handleClose }: Props) => {
                   >
                     {title}
                   </Dialog.Title>
-                  <div className="mt-2">{children}</div>
+                  <div className="text-sm text-gray-700 dark:text-gray-300 mt-2">
+                    {children}
+                  </div>
                 </div>
               </div>
             </div>

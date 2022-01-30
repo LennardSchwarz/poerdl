@@ -13,7 +13,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       isOpen={isOpen}
       handleClose={handleClose}
     >
-      <p className="text-sm text-gray-500">
+      <p>
         Du hast 6 Versuche, das Wort des Tages zu erraten. Nach jedem Versuch
         wird mit unterschiedlichen Farben angezeigt, wie nah dein Wort dem
         gesuchten war:
@@ -26,9 +26,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="K" />
         <Cell value="E" />
       </div>
-      <p className="text-sm text-gray-500">
-        Der <b>grüne</b> Buchstabe D kommt im Wort an der richtigen Stelle vor.
-      </p>
+      <p>Das D kommt im Wort an der richtigen Stelle vor.</p>
 
       <div className="flex justify-center mb-1 mt-4">
         <Cell value="K" />
@@ -37,10 +35,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="A" status="present" />
         <Cell value="P" />
       </div>
-      <p className="text-sm text-gray-500">
-        Der <b>gelbe</b> Buchstabe A kommt im Wort vor, jedoch an anderer
-        Stelle.
-      </p>
+      <p>Das A kommt im Wort vor, jedoch an anderer Stelle.</p>
 
       <div className="flex justify-center mb-1 mt-4">
         <Cell value="G" />
@@ -49,11 +44,9 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         <Cell value="N" />
         <Cell value="E" />
       </div>
-      <p className="text-sm text-gray-500">
-        Der <b>graue</b> Buchstabe R kommt nicht im Wort vor.
-      </p>
+      <p>Das R kommt nicht im Wort vor.</p>
 
-      <p className="text-sm text-gray-500  mt-4">
+      <p className="mt-4">
         Um Mitternacht wird ein neues Wörtchen des Tages freigeschaltet!
       </p>
     </BaseModal>
