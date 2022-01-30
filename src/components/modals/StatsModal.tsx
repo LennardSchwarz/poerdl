@@ -1,83 +1,80 @@
-import { Fragment } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import { XCircleIcon } from '@heroicons/react/outline'
+import Countdown from 'react-countdown'
 import { StatBar } from '../stats/StatBar'
 import { Histogram } from '../stats/Histogram'
 import { GameStats } from '../../lib/localStorage'
+import { shareStatus } from '../../lib/share'
+import { tomorrow } from '../../lib/words'
+import { BaseModal } from './BaseModal'
+import {
+  STATISTICS_TITLE,
+  GUESS_DISTRIBUTION_TEXT,
+  NEW_WORD_TEXT,
+  SHARE_TEXT,
+} from '../../constants/strings'
 
 type Props = {
   isOpen: boolean
   handleClose: () => void
+  guesses: string[]
   gameStats: GameStats
+  isGameLost: boolean
+  isGameWon: boolean
+  handleShare: () => void
 }
 
-export const StatsModal = ({ isOpen, handleClose, gameStats }: Props) => {
-  return (
-    <Transition.Root show={isOpen} as={Fragment}>
-      <Dialog
-        as="div"
-        className="fixed z-10 inset-0 overflow-y-auto"
-        onClose={handleClose}
+export const StatsModal = ({
+  isOpen,
+  handleClose,
+  guesses,
+  gameStats,
+  isGameLost,
+  isGameWon,
+  handleShare,
+}: Props) => {
+  if (gameStats.totalGames <= 0) {
+    return (
+      <BaseModal
+        title={STATISTICS_TITLE}
+        isOpen={isOpen}
+        handleClose={handleClose}
       >
-        <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-          <Transition.Child
-            as={Fragment}
-            enter="ease-out duration-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="ease-in duration-200"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
+        <StatBar gameStats={gameStats} />
+      </BaseModal>
+    )
+  }
+  return (
+    <BaseModal
+      title={STATISTICS_TITLE}
+      isOpen={isOpen}
+      handleClose={handleClose}
+    >
+      <StatBar gameStats={gameStats} />
+      <h4 className="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100">
+        {GUESS_DISTRIBUTION_TEXT}
+      </h4>
+      <Histogram gameStats={gameStats} />
+      {(isGameLost || isGameWon) && (
+        <div className="mt-5 sm:mt-6 columns-2 dark:text-white">
+          <div>
+            <h5>{NEW_WORD_TEXT}</h5>
+            <Countdown
+              className="text-lg font-medium text-gray-900 dark:text-gray-100"
+              date={tomorrow}
+              daysInHours={true}
+            />
+          </div>
+          <button
+            type="button"
+            className="mt-2 w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm"
+            onClick={() => {
+              shareStatus(guesses, isGameLost)
+              handleShare()
+            }}
           >
-            <Dialog.Overlay className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
-          </Transition.Child>
-
-          {/* This element is to trick the browser into centering the modal contents. */}
-          <span
-            className="hidden sm:inline-block sm:align-middle sm:h-screen"
-            aria-hidden="true"
-          >
-            &#8203;
-          </span>
-          <Transition.Child
-            as={Fragment}
-            enter="ease-out duration-300"
-            enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-            enterTo="opacity-100 translate-y-0 sm:scale-100"
-            leave="ease-in duration-200"
-            leaveFrom="opacity-100 translate-y-0 sm:scale-100"
-            leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-          >
-            <div
-              className="inline-block align-bottom bg-white rounded-lg px-4 
-                            pt-5 pb-4 text-left overflow-hidden shadow-xl transform 
-                            transition-all sm:my-8 sm:align-middle sm:max-w-sm sm:w-full sm:p-6"
-            >
-              <div className="absolute right-4 top-4">
-                <XCircleIcon
-                  className="h-6 w-6 cursor-pointer"
-                  onClick={handleClose}
-                />
-              </div>
-              <div>
-                <div className="text-center">
-                  <Dialog.Title
-                    as="h3"
-                    className="text-lg leading-6 font-medium text-gray-900"
-                  >
-                    Statistik
-                  </Dialog.Title>
-                  <StatBar gameStats={gameStats} />
-                  <h4 className="text-lg leading-6 font-medium text-gray-900">
-                    Versuchsverteilung
-                  </h4>
-                  <Histogram gameStats={gameStats} />
-                </div>
-              </div>
-            </div>
-          </Transition.Child>
+            {SHARE_TEXT}
+          </button>
         </div>
-      </Dialog>
-    </Transition.Root>
+      )}
+    </BaseModal>
   )
 }
