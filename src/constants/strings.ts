@@ -1,19 +1,26 @@
-export const WORDLE_TITLE = 'Not Wordle'
+export const WORDLE_TITLE = 'Wörtchen'
 
-export const WIN_MESSAGES = ['Great Job!', 'Awesome', 'Well done!']
-export const GAME_COPIED_MESSAGE = 'Game copied to clipboard'
-export const ABOUT_GAME_MESSAGE = 'About this game'
-export const NOT_ENOUGH_LETTERS_MESSAGE = 'Not enough letters'
-export const WORD_NOT_FOUND_MESSAGE = 'Word not found'
+export const WIN_MESSAGES = [
+  'Gut gemacht!',
+  'Super!',
+  'Geiles Gehirn, Günter!',
+  'Mega',
+  'Voll gut ey',
+  'Du scheinst kluk zu sein',
+]
+export const GAME_COPIED_MESSAGE = 'Spielverlauf kopiert'
+export const ABOUT_GAME_MESSAGE = 'Über Wörtchen'
+export const NOT_ENOUGH_LETTERS_MESSAGE = 'Nicht genug Buchstaben'
+export const WORD_NOT_FOUND_MESSAGE = 'Wort nicht gefunden'
 export const CORRECT_WORD_MESSAGE = (solution: string) =>
-  `The word was ${solution}`
-export const ENTER_TEXT = 'Enter'
-export const DELETE_TEXT = 'Delete'
-export const STATISTICS_TITLE = 'Statistics'
-export const GUESS_DISTRIBUTION_TEXT = 'Guess Distribution'
-export const NEW_WORD_TEXT = 'New word in'
-export const SHARE_TEXT = 'Share'
-export const TOTAL_TRIES_TEXT = 'Total tries'
-export const SUCCESS_RATE_TEXT = 'Success rate'
-export const CURRENT_STREAK_TEXT = 'Current streak'
-export const BEST_STREAK_TEXT = 'Best streak'
+  `Das gesuchte Wort war ${solution}`
+export const ENTER_TEXT = 'Eingabe'
+export const DELETE_TEXT = 'Löschen'
+export const STATISTICS_TITLE = 'Statistik'
+export const GUESS_DISTRIBUTION_TEXT = 'Versuchsverteilung'
+export const NEW_WORD_TEXT = 'Neues Wort in'
+export const SHARE_TEXT = 'Teilen'
+export const TOTAL_TRIES_TEXT = 'Spiele gesamt'
+export const SUCCESS_RATE_TEXT = 'Spiele gewonnen'
+export const CURRENT_STREAK_TEXT = 'Aktuelle Gewinnserie'
+export const BEST_STREAK_TEXT = 'Längste Gewinnserie'

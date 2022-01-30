@@ -10,19 +10,18 @@ export const shareStatus = (guesses: string[], lost: boolean) => {
   )
 }
 
-export const shareStatusWithBBCode = (guesses: string[]) => {
+export const shareStatusWithBBCode = (guesses: string[], lost: boolean) => {
   navigator.clipboard.writeText(
-    '[Wörtchen](https://woertchen.sofacoach.de) ' +
-      solutionIndex +
-      ' ' +
-      guesses.length +
-      '/6\n\n' +
-      guesses
-        .map(
-          (guess) =>
-            `${generateEmojiGridLine(guess)} [spoiler]${guess}[/spoiler]`
-        )
-        .join('\n')
+    '[Wörtchen](https://woertchen.sofacoach.de) ' + solutionIndex + ' ' + lost
+      ? 'X'
+      : guesses.length +
+          '/6\n\n' +
+          guesses
+            .map(
+              (guess) =>
+                `${generateEmojiGridLine(guess)} [spoiler]${guess}[/spoiler]`
+            )
+            .join('\n')
   )
 }
 
