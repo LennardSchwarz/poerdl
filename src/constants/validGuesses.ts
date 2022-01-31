@@ -9,6 +9,7 @@
  * - alien
  * - erpel
  * - herzt
+ * - kacke
  * - kebab
  * - kebap
  * - zarge
@@ -1021,6 +1022,7 @@ export const VALIDGUESSES = [
   'kaaba',
   'kabel',
   'kabul',
+  'kacke',
   'kader',
   'kadis',
   'kaffs',
