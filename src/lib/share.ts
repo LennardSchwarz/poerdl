@@ -1,22 +1,30 @@
 import { getGuessStatuses } from './statuses'
 import { solutionIndex } from './words'
-import { WORDLE_TITLE } from '../constants/strings'
+import { GAME_TITLE } from '../constants/strings'
 
-export const shareStatus = (guesses: string[], lost: boolean) => {
+export const shareStatus = (
+  guesses: string[],
+  lost: boolean,
+  isHardMode: boolean
+) => {
   navigator.clipboard.writeText(
-    `${WORDLE_TITLE} ${solutionIndex} ${
-      lost ? 'X' : guesses.length
-    }/6\n\n${generateEmojiGrid(guesses)}\n\nhttps://woertchen.sofacoach.de`
+    `${GAME_TITLE} ${solutionIndex} ${lost ? 'X' : guesses.length}/6${
+      isHardMode ? '*' : ''
+    }\n\n${generateEmojiGrid(guesses)}\n\nhttps://woertchen.sofacoach.de`
   )
 }
 
-export const shareStatusWithBBCode = (guesses: string[], lost: boolean) => {
+export const shareStatusWithBBCode = (
+  guesses: string[],
+  lost: boolean,
+  isHardMode: boolean
+) => {
   navigator.clipboard.writeText(
-    '[Wörtchen](https://woertchen.sofacoach.de) ' +
+    `[${GAME_TITLE}](https://woertchen.sofacoach.de) ` +
       solutionIndex +
       ' ' +
       (lost ? 'X' : guesses.length) +
-      '/6\n\n' +
+      `/6${isHardMode ? '*' : ''}\n\n` +
       guesses
         .map(
           (guess) =>

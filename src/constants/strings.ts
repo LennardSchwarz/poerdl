@@ -1,12 +1,18 @@
-export const WORDLE_TITLE = 'Wörtchen'
+export const GAME_TITLE = 'Wörtchen'
 
 export const WIN_MESSAGES = [
   'Gut gemacht!',
   'Super!',
   'Geiles Gehirn, Günter!',
   'Mega',
+  'Stark',
   'Voll gut ey',
   'Du scheinst kluk zu sein',
+  'Weiter so',
+  'Toll!',
+  'Darauf eine Scheibe Vollkornbrot!',
+  'So muss die Baklava schmecken',
+  'Stabile Leistung',
 ]
 export const GAME_COPIED_MESSAGE = 'Spielverlauf kopiert'
 export const ABOUT_GAME_MESSAGE = 'Über Wörtchen'
