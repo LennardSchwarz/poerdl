@@ -214,12 +214,12 @@ function App() {
           {GAME_TITLE}
         </h1>
         {isHardMode ? (
-          <AcademicCapIcon
+          <CakeIcon
             className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
             onClick={() => handleHardMode(!isHardMode)}
           />
         ) : (
-          <CakeIcon
+          <AcademicCapIcon
             className="h-6 w-6 mr-2 cursor-pointer dark:stroke-white"
             onClick={() => handleHardMode(!isHardMode)}
           />

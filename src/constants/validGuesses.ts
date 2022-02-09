@@ -16,7 +16,7 @@
  * - zumba
  */
 
-export const VALIDGUESSES = [
+export const VALID_GUESSES = [
   'ascii',
   'aales',
   'aases',
