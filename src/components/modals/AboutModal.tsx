@@ -22,7 +22,7 @@ export const AboutModal = ({ isOpen, handleClose }: Props) => {
         </a>
         . Der Spielcode basiert auf Hannah Parks{' '}
         <a
-          href="https://github.com/hannahcode/wordle"
+          href="https://github.com/cwackerfuss/react-wordle"
           className="underline font-bold"
         >
           Open-Source-Adaption

@@ -16,7 +16,7 @@
  * - zumba
  */
 
-export const VALIDGUESSES = [
+export const VALID_GUESSES = [
   'ascii',
   'aales',
   'aases',
@@ -418,6 +418,7 @@ export const VALIDGUESSES = [
   'dills',
   'dinar',
   'dinge',
+  'dingo',
   'dings',
   'diode',
   'dipol',
@@ -898,6 +899,8 @@ export const VALIDGUESSES = [
   'honig',
   'horde',
   'horns',
+  'horny',
+  'horse',
   'horst',
   'horts',
   'hosen',
@@ -1423,6 +1426,7 @@ export const VALIDGUESSES = [
   'multi',
   'mumie',
   'mumms',
+  'mummy',
   'mumps',
   'murks',
   'musen',
@@ -2099,6 +2103,7 @@ export const VALIDGUESSES = [
   'trick',
   'trier',
   'trios',
+  'tripe',
   'trips',
   'trogs',
   'troja',
