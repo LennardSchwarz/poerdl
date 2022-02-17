@@ -19,31 +19,31 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="D" status="correct" />
         <Cell value="A" />
-        <Cell value="N" />
-        <Cell value="K" />
-        <Cell value="E" />
+        <Cell value="L" />
+        <Cell value="L" />
+        <Cell value="E" status="correct" />
+        <Cell value="S" />
       </div>
-      <p>Das D kommt im Wort an der richtigen Stelle vor.</p>
+      <p>Das E kommt im Wort an der richtigen Stelle vor.</p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="K" />
-        <Cell value="E" />
-        <Cell value="B" />
-        <Cell value="A" status="present" />
-        <Cell value="P" />
+        <Cell value="L" status="present" />
+        <Cell value="A" />
+        <Cell value="U" />
+        <Cell value="C" />
+        <Cell value="H" />
       </div>
-      <p>Das A kommt im Wort vor, jedoch an anderer Stelle.</p>
+      <p>Das L kommt im Wort vor, jedoch an anderer Stelle.</p>
 
       <div className="flex justify-center mb-1 mt-4">
-        <Cell value="G" />
-        <Cell value="R" status="absent" />
-        <Cell value="Ü" />
-        <Cell value="N" />
-        <Cell value="E" />
+        <Cell value="O" />
+        <Cell value="T" />
+        <Cell value="T" />
+        <Cell value="O" />
+        <Cell value="S" status="absent" />
       </div>
-      <p>Das R kommt nicht im Wort vor.</p>
+      <p>Das S kommt nicht im Wort vor.</p>
 
       <p className="mt-4">
         Jeden Tag um Mitternacht wird ein neues Wörtchen freigeschaltet. Hast du
