@@ -31,8 +31,8 @@ export const SettingsModal = ({
           handleFlag={handleHardMode}
         />
         <p className="text-sm text-left">
-          Im schweren Modus können keine Wörter eingegeben werden, die die
-          Hinweise der vorigen Runden nicht berücksichtigen.
+          Im schweren Modus muss jeder Versuch die Hinweise der vorigen Runden
+          berücksichtigen.
         </p>
         <SettingsToggle
           settingName="Nachtmodus"
