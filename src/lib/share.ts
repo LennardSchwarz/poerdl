@@ -1,6 +1,8 @@
 import { getGuessStatuses } from './statuses'
 import { solutionIndex } from './words'
 import { GAME_TITLE } from '../constants/strings'
+import { getStoredIsHighContrastMode } from './localStorage'
+import { MAX_CHALLENGES } from '../constants/settings'
 
 export const shareStatus = (
   guesses: string[],
@@ -8,9 +10,11 @@ export const shareStatus = (
   isHardMode: boolean
 ) => {
   navigator.clipboard.writeText(
-    `${GAME_TITLE} ${solutionIndex} ${lost ? 'X' : guesses.length}/6${
-      isHardMode ? '*' : ''
-    }\n\n${generateEmojiGrid(guesses)}\n\nhttps://woertchen.sofacoach.de`
+    `${GAME_TITLE} ${solutionIndex} ${
+      lost ? 'X' : guesses.length
+    }/${MAX_CHALLENGES}${isHardMode ? '*' : ''}\n\n${generateEmojiGrid(
+      guesses
+    )}\n\nhttps://woertchen.sofacoach.de`
   )
 }
 
@@ -24,7 +28,7 @@ export const shareStatusWithBBCode = (
       solutionIndex +
       ' ' +
       (lost ? 'X' : guesses.length) +
-      `/6${isHardMode ? '*' : ''}\n\n` +
+      `/${MAX_CHALLENGES}${isHardMode ? '*' : ''}\n\n` +
       guesses
         .map(
           (guess) =>
@@ -36,15 +40,25 @@ export const shareStatusWithBBCode = (
 
 function generateEmojiGridLine(guess: string) {
   const status = getGuessStatuses(guess)
+  const isHighContrast = getStoredIsHighContrastMode()
   return guess
     .split('')
     .map((letter, i) => {
       switch (status[i]) {
         case 'correct':
+          if (isHighContrast) {
+            return '🟧'
+          }
           return '🟩'
         case 'present':
+          if (isHighContrast) {
+            return '🟦'
+          }
           return '🟨'
         default:
+          if (localStorage.getItem('theme') === 'dark') {
+            return '⬛'
+          }
           return '⬜'
       }
     })
