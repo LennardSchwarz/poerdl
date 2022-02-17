@@ -14,9 +14,8 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       handleClose={handleClose}
     >
       <p>
-        Du hast 6 Versuche, das Wort des Tages zu erraten. Nach jedem Versuch
-        wird mit unterschiedlichen Farben angezeigt, wie nah dein Wort dem
-        gesuchten war:
+        Errate das Wörtchen des Tages in 6 Versuchen. Nach jedem Versuch wird
+        mit Farben angezeigt, wie nah dein Wort der Lösung war:
       </p>
 
       <div className="flex justify-center mb-1 mt-4">
@@ -47,7 +46,15 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       <p>Das R kommt nicht im Wort vor.</p>
 
       <p className="mt-4">
-        Um Mitternacht wird ein neues Wörtchen des Tages freigeschaltet!
+        Jeden Tag um Mitternacht wird ein neues Wörtchen freigeschaltet. Hast du
+        Feedback oder willst dein Ergebnis teilen? Schreibe ins{' '}
+        <a
+          href="https://forum.sofacoach.de/t/1888"
+          className="underline font-bold"
+        >
+          Sofacoach-Forum
+        </a>
+        .
       </p>
 
       <p className="mt-6 italic text-sm text-gray-500 dark:text-gray-300">
@@ -58,32 +65,12 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
         >
           Wordle
         </a>
-        der auf Basis von Hannah Parks{' '}
-        <a
-          href="https://github.com/cwackerfuss/react-wordle"
-          className="underline font-bold"
-        >
-          Open-Source-Adaption
-        </a>{' '}
-        erstellt wurde.
-      </p>
-      <p className="mt-2">
-        Den Quellcode von Wörtchen findet ihr{' '}
+        . Den Quellcode findet ihr{' '}
         <a
           href="https://github.com/diondiondion/woertchen/"
           className="underline font-bold"
         >
           auf Github
-        </a>
-        .
-      </p>
-      <p className="mt-2">
-        Hast du Feedback oder willst dein Ergebnis teilen? Schreibe ins{' '}
-        <a
-          href="https://forum.sofacoach.de/t/1888"
-          className="underline font-bold"
-        >
-          Sofacoach-Forum
         </a>
         .
       </p>

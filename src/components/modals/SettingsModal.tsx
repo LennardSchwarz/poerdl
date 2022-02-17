@@ -23,20 +23,24 @@ export const SettingsModal = ({
   handleHighContrastMode,
 }: Props) => {
   return (
-    <BaseModal title="Settings" isOpen={isOpen} handleClose={handleClose}>
+    <BaseModal title="Einstellungen" isOpen={isOpen} handleClose={handleClose}>
       <div className="grid-cols-2 gap-4">
         <SettingsToggle
-          settingName="Hard Mode"
+          settingName="Schwerer Modus"
           flag={isHardMode}
           handleFlag={handleHardMode}
         />
+        <p className="text-sm text-left">
+          Im schweren Modus können keine Wörter eingegeben werden, die die
+          Hinweise der vorigen Runden nicht berücksichtigen.
+        </p>
         <SettingsToggle
-          settingName="Dark Mode"
+          settingName="Nachtmodus"
           flag={isDarkMode}
           handleFlag={handleDarkMode}
         />
         <SettingsToggle
-          settingName="High Contrast Mode"
+          settingName="Hoher Kontrast"
           flag={isHighContrastMode}
           handleFlag={handleHighContrastMode}
         />
