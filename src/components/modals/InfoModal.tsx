@@ -49,6 +49,44 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
       <p className="mt-4">
         Um Mitternacht wird ein neues Wörtchen des Tages freigeschaltet!
       </p>
+
+      <p className="mt-6 italic text-sm text-gray-500 dark:text-gray-300">
+        Wörtchen ist ein deutschsprachiger Klon von{' '}
+        <a
+          href="https://www.powerlanguage.co.uk/wordle/"
+          className="underline font-bold"
+        >
+          Wordle
+        </a>
+        der auf Basis von Hannah Parks{' '}
+        <a
+          href="https://github.com/cwackerfuss/react-wordle"
+          className="underline font-bold"
+        >
+          Open-Source-Adaption
+        </a>{' '}
+        erstellt wurde.
+      </p>
+      <p className="mt-2">
+        Den Quellcode von Wörtchen findet ihr{' '}
+        <a
+          href="https://github.com/diondiondion/woertchen/"
+          className="underline font-bold"
+        >
+          auf Github
+        </a>
+        .
+      </p>
+      <p className="mt-2">
+        Hast du Feedback oder willst dein Ergebnis teilen? Schreibe ins{' '}
+        <a
+          href="https://forum.sofacoach.de/t/1888"
+          className="underline font-bold"
+        >
+          Sofacoach-Forum
+        </a>
+        .
+      </p>
     </BaseModal>
   )
 }
