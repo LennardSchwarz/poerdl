@@ -7,6 +7,7 @@
  * Extra words added:
  * - anime
  * - alien
+ * - echse
  * - erpel
  * - herzt
  * - kacke
@@ -485,6 +486,7 @@ export const VALID_GUESSES = [
   'ebert',
   'ebola',
   'echos',
+  'echse',
   'edeka',
   'edens',
   'eders',
