@@ -13,6 +13,11 @@
  * - kacke
  * - kebab
  * - kebap
+ * - pulen
+ * - pulst
+ * - pulte
+ * - solar
+ * - turbo
  * - zarge
  * - zumba
  */
@@ -1836,7 +1841,6 @@ export const VALID_GUESSES = [
   'segen',
   'seher',
   'seide',
-  'seiko',
   'seils',
   'seime',
   'seims',
@@ -1858,8 +1862,6 @@ export const VALID_GUESSES = [
   'sexes',
   'sexte',
   'sexus',
-  'orita',
-  'shell',
   'shops',
   'shows',
   'sicht',
@@ -1867,11 +1869,8 @@ export const VALID_GUESSES = [
   'siegs',
   'siele',
   'siels',
-  'sigis',
   'silbe',
-  'silke',
   'silos',
-  'simon',
   'simse',
   'sinai',
   'sinns',
@@ -1898,15 +1897,13 @@ export const VALID_GUESSES = [
   'sohle',
   'sohne',
   'sohns',
+  'solar',
   'solde',
   'solds',
   'solei',
-  'solon',
   'solos',
   'sonde',
   'songs',
-  'sonja',
-  'sonys',
   'sorbe',
   'sorte',
   'sound',
@@ -1953,7 +1950,6 @@ export const VALID_GUESSES = [
   'stein',
   'steiß',
   'stern',
-  'steve',
   'stich',
   'stiel',
   'stier',
@@ -1986,7 +1982,6 @@ export const VALID_GUESSES = [
   'sumpf',
   'suppe',
   'sushi',
-  'svens',
   'swing',
   'sylts',
   'syrer',
@@ -2067,7 +2062,6 @@ export const VALID_GUESSES = [
   'tiger',
   'tikis',
   'tilde',
-  'tinas',
   'tinte',
   'tipps',
   'tirol',
@@ -2128,6 +2122,7 @@ export const VALID_GUESSES = [
   'tunis',
   'tunte',
   'tupel',
+  'turbo',
   'turin',
   'turme',
   'turms',
@@ -2181,7 +2176,6 @@ export const VALID_GUESSES = [
   'venen',
   'venus',
   'verbs',
-  'verdi',
   'verse',
   'vetos',
   'video',
@@ -3718,6 +3712,9 @@ export const VALID_GUESSES = [
   'prüfe',
   'prüft',
   'pudre',
+  'pulen',
+  'pulst',
+  'pulte',
   'pumpe',
   'pumpt',
   'purem',
