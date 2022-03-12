@@ -13,6 +13,7 @@
  * - kacke
  * - kebab
  * - kebap
+ * - piers
  * - pulen
  * - pulst
  * - pulte
@@ -1615,6 +1616,7 @@ export const VALID_GUESSES = [
   'pfund',
   'phase',
   'photo',
+  'piers',
   'piezo',
   'pille',
   'pilot',
