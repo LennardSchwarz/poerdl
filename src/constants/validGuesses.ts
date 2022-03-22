@@ -17,6 +17,9 @@
  * - pulen
  * - pulst
  * - pulte
+ * - rasur
+ * - rauke
+ * - rudel
  * - solar
  * - turbo
  * - zarge
@@ -1715,11 +1718,13 @@ export const VALID_GUESSES = [
   'rangs',
   'rappe',
   'rasse',
+  'rasur',
   'rates',
   'ratte',
   'raubs',
   'rauch',
   'raudi',
+  'rauke',
   'raume',
   'raums',
   'raupe',
@@ -1770,6 +1775,7 @@ export const VALID_GUESSES = [
   'rubel',
   'rubin',
   'rucks',
+  'rudel',
   'ruder',
   'rudis',
   'rufer',
