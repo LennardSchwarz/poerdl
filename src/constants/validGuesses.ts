@@ -19,6 +19,7 @@
  * - pulte
  * - rasur
  * - rauke
+ * - reuse
  * - rudel
  * - solar
  * - turbo
@@ -1740,6 +1741,7 @@ export const VALID_GUESSES = [
   'reset',
   'reste',
   'rests',
+  'reuse',
   'revue',
   'rhein',
   'rhone',
