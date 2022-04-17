@@ -13,6 +13,7 @@
  * - kacke
  * - kebab
  * - kebap
+ * - minze
  * - piers
  * - pulen
  * - pulst
@@ -1401,6 +1402,7 @@ export const VALID_GUESSES = [
   'mings',
   'minis',
   'minsk',
+  'minze',
   'mists',
   'mitte',
   'mixer',
