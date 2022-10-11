@@ -272,6 +272,19 @@ export const WORDS = [
   'sogen',
   'bluts',
   'haken',
+  'hefts',
+'chips',
+'boots',
+'raupe',
+'beile',
+'sowie',
+'nackt',
+'pablo',
+'lasst',
+'kolik',
+'party',
+'bohrt',
+'egels',
 ]
 
 // TO DO: Curate the following words:
