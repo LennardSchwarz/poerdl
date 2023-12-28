@@ -264,12 +264,6 @@ export const WORDS = [
     'kiosk',
     'zehrt',
     'nehmt',
-]
-
-// AB HIER SIND DIE WÖRTER NICHT GEPRÜFT.
-// Die Wortliste enthält englische Wörter oder Ortsnamen
-// und Doppelvokale statt Umlaute. Diese Wörter sollten entfernt werden.
-/*
     'kurde',
     'zebra',
     'zieme',
@@ -498,7 +492,12 @@ export const WORDS = [
     'pulte',
     'masse',
     'helme',
-// BIS HIERHER GEPRÜFT VON FRY    
+]
+
+// AB HIER SIND DIE WÖRTER NICHT GEPRÜFT.
+// Die Wortliste enthält englische Wörter oder Ortsnamen
+// und Doppelvokale statt Umlaute. Diese Wörter sollten entfernt werden.
+/*
     'annie',
     'addis',
     'quasi',
