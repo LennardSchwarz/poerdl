@@ -57,31 +57,13 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                 Spielen
             </button>
 
-            <p className="mt-4">
-                Hast du Feedback oder willst dein Ergebnis teilen? Schreibe ins{' '}
-                <a
-                    href="https://forum.sofacoach.de/t/1888"
-                    className="underline font-bold"
-                >
-                    Sofacoach-Forum
-                </a>
-                .
-            </p>
-
             <p className="mt-5 italic text-sm text-gray-500 dark:text-gray-300">
-                Wörtchen ist ein deutschsprachiger Klon von{' '}
+                Pördl ist ein deutschsprachiger Klon von{' '}
                 <a
                     href="https://www.nytimes.com/games/wordle/index.html"
                     className="underline font-bold"
                 >
                     Wordle
-                </a>
-                . Den Quellcode findet ihr{' '}
-                <a
-                    href="https://github.com/diondiondion/woertchen/"
-                    className="underline font-bold"
-                >
-                    auf Github
                 </a>
                 .
             </p>

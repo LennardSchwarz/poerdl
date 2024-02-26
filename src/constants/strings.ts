@@ -3,21 +3,16 @@ export const GAME_TITLE = process.env.REACT_APP_GAME_NAME!
 export const WIN_MESSAGES = [
   'Gut gemacht!',
   'Super!',
-  'Geiles Gehirn, Günter!',
   'Mega',
   'Stark',
-  'Voll gut ey',
-  'Du scheinst kluk zu sein',
   'Weiter so',
   'Toll!',
-  'Darauf eine Scheibe Vollkornbrot!',
-  'So muss die Baklava schmecken',
   'Stabile Leistung',
 ]
 export const GAME_COPIED_MESSAGE = 'Spielverlauf kopiert'
 export const ABOUT_GAME_MESSAGE = 'Über Wörtchen'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'Nicht genug Buchstaben'
-export const WORD_NOT_FOUND_MESSAGE = 'Wort nicht gefunden'
+export const WORD_NOT_FOUND_MESSAGE = 'Wort nicht gefunden. Versuche es mit Wörtern wie "Dampf", "Radio" oder "Stein"'
 export const HARD_MODE_ALERT_MESSAGE =
   'Der schwere Modus kann nur am Anfang eines Spiels aktiviert werden'
 export const CORRECT_WORD_MESSAGE = (solution: string) =>
