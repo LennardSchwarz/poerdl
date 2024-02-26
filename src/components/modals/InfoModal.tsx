@@ -14,7 +14,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
             handleClose={handleClose}
         >
             <p>
-                Errate das Wörtchen des Tages in 6 Versuchen. Nach jedem Versuch
+                Errate das Pördl des Tages in 6 Versuchen. Nach jedem Versuch
                 wird mit Farben angezeigt, wie nah dein Wort der Lösung war:
             </p>
 
@@ -46,7 +46,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
             <p>Das S kommt nicht im Wort vor.</p>
 
             <p className="mt-4">
-                Jeden Tag um Mitternacht wird ein neues Wörtchen freigeschaltet.
+                Jeden Tag um Mitternacht wird ein neues Pördl freigeschaltet.
             </p>
 
             <button

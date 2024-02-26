@@ -160,3 +160,4 @@ To enable Plausible Analytics:
 
 - Create a new website with Plausible Analytics with a given domain, e.g. `example.app`
 - In [.env](.env), add `REACT_APP_PLAUSIBLE_DOMAIN=example.app`
+- If you are self-hosting Plausible Analytics, add `REACT_APP_PLAUSIBLE_HOST=https://my-plausible-server-base-url, `where `my-plausible-server-base-url` is the base url for your self-hosted Plausible instance (it assumes `https://my-plausible-server-base-url/js/plausible.js` is where plausible js script is hosted).

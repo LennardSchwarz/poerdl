@@ -10,7 +10,7 @@ export const WIN_MESSAGES = [
   'Stabile Leistung',
 ]
 export const GAME_COPIED_MESSAGE = 'Spielverlauf kopiert'
-export const ABOUT_GAME_MESSAGE = 'Über Wörtchen'
+export const ABOUT_GAME_MESSAGE = 'Über Pördl'
 export const NOT_ENOUGH_LETTERS_MESSAGE = 'Nicht genug Buchstaben'
 export const WORD_NOT_FOUND_MESSAGE = 'Wort nicht gefunden. Versuche es mit Wörtern wie "Dampf", "Radio" oder "Stein"'
 export const HARD_MODE_ALERT_MESSAGE =
