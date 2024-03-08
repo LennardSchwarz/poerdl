@@ -84,7 +84,7 @@ export const StatsModal = ({
                 handleShare()
               }}
             >
-              Forumscode mit Spoilern kopieren
+            Score teilen (entählt Spoiler)
             </button>
           </div>
         </div>

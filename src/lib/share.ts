@@ -14,7 +14,7 @@ export const shareStatus = (
       lost ? 'X' : guesses.length
     }/${MAX_CHALLENGES}${isHardMode ? '*' : ''}\n\n${generateEmojiGrid(
       guesses
-    )}\n\nhttps://woertchen.sofacoach.de`
+    )}\n\nhttps://pennard.de`
   )
 }
 
@@ -24,7 +24,7 @@ export const shareStatusWithBBCode = (
   isHardMode: boolean
 ) => {
   navigator.clipboard.writeText(
-    `[${GAME_TITLE}](https://woertchen.sofacoach.de) ` +
+    `[${GAME_TITLE}](https://pennard.de) ` +
       solutionIndex +
       ' ' +
       (lost ? 'X' : guesses.length) +
