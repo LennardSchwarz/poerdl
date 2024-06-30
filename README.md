@@ -1,8 +1,8 @@
-# React Wordle
+# Poerdl
 
 This is a clone project of the popular word guessing game we all know and love. Made using React, Typescript, and Tailwind.
 
-[**Try out the demo!**](https://reactle.vercel.app/)
+[**Try out the demo on pennard.de!**](https://pennard.de)
 
 ## Build and run
 
@@ -11,8 +11,7 @@ This is a clone project of the popular word guessing game we all know and love. 
 Clone the repository and perform the following command line actions:
 
 ```bash
-$> cd react-wordle
-$> npm install
+$> npm ci
 $> npm run start
 ```
 
