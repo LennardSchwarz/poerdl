@@ -12,7 +12,7 @@ Clone the repository and perform the following command line actions:
 
 ```bash
 $> npm ci
-$> npm run start
+$> npm run dev
 ```
 
 ### To build/run docker container:
