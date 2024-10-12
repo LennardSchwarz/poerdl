@@ -84,7 +84,7 @@ export const StatsModal = ({
                 handleShare()
               }}
             >
-            Spielverlauf kopieren mit Spoiler
+            Spielverlauf kopieren MIT Spoiler
             </button>
           </div>
         </div>
