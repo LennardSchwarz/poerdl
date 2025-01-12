@@ -42,7 +42,7 @@
     <% if (process.env.NODE_ENV === 'production' && process.env.REACT_APP_PLAUSIBLE_DOMAIN != null) { %>
       <!-- Plausible Analytics -->
       <% if (process.env.REACT_APP_PLAUSIBLE_HOST != null) { %>
-        <script defer data-domain="%REACT_APP_PLAUSIBLE_DOMAIN%" src="%REACT_APP_PLAUSIBLE_HOST%/js/plausible.js"></script>
+        <script defer data-domain="%REACT_APP_PLAUSIBLE_DOMAIN%" src="%REACT_APP_PLAUSIBLE_HOST%/js/script.js"></script>
       <% } else { %>
         <script defer data-domain="%REACT_APP_PLAUSIBLE_DOMAIN%" src="https://plausible.io/js/plausible.js"></script>
       <% } %>
